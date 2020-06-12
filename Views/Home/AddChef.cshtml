@@ -1,0 +1,47 @@
+@model Chef
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/style.css"/>
+    <title>Add Chef</title>
+
+</head>
+
+<body>
+
+<div class="container">
+    <div class="title">
+        <h1> Add a Chef! </h1>
+    </div>
+    <a href="/"> Home </a>
+    <div class="chefForm">
+        <form asp-action="CreateChef" asp-controller="Home" method="POST">
+            <div class="form-group">
+                <label for="FirstName">First Name: </label>
+                <input asp-for="FirstName" class="form-control">
+                <span class="col-sm-12 text-danger" asp-validation-for="FirstName"></span>
+            </div>
+            <div class="form-group">
+                <label for="LastName">Last Name: </label>
+                <input asp-for="LastName" class="form-control">
+                <span class="col-sm-12 text-danger" asp-validation-for="LastName"></span>
+            </div>
+            <div class="form-group">
+                <label for="Birthday">Birthday: </label>
+                <input asp-for="Birthday" class="form-control" type="date">
+                <span class="col-sm-12 text-danger" asp-validation-for="Birthday"></span>
+            </div>
+            <button class="btn btn-success btn-md"> CHEF ME! </button>
+        </form>
+    </div>
+
+
+
+
+
+
+</div>
+</body>
+</html>
